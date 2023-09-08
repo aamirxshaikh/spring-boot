@@ -1,4 +1,4 @@
-package com.example.springboot.customer;
+package com.example.springboot.product;
 
 import org.springframework.stereotype.Repository;
 
