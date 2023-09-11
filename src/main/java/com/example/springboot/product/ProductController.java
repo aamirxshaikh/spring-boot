@@ -1,4 +1,4 @@
-package com.example.springboot.customer;
+package com.example.springboot.product;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
