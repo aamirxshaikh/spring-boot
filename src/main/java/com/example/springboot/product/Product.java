@@ -1,5 +1,8 @@
 package com.example.springboot.product;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Product {
   private final Long id;
   private final String name;
@@ -11,6 +14,7 @@ public class Product {
     this.price = price;
   }
 
+  @JsonProperty("productId")
   public Long getId() {
     return id;
   }
@@ -19,6 +23,11 @@ public class Product {
     return name;
   }
 
+  public String getNameAgain() {
+    return name;
+  }
+
+  @JsonIgnore
   public Double getPrice() {
     return price;
   }
