@@ -7,12 +7,12 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ProductConfiguration {
-  @Value("${app.useFakeCustomerRepository:false}")
+  @Value("${app.useFakeProductRepository:false}")
   private Boolean useFakeProductRepository;
 
   @Bean
-  CommandLineRunner commandLineRunner() {
-    return args -> System.out.println("Command line runner");
+  CommandLineRunner productCommandLineRunner() {
+    return args -> System.out.println("Product Command line runner");
   }
 
   @Bean
