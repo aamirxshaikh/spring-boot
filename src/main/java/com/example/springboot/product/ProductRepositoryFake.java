@@ -15,4 +15,11 @@ public class ProductRepositoryFake implements ProductRepository {
             new Product(3L, "Product 3", 1700.99, "key3")
     );
   }
+
+  @Override
+  public List<Product> getFeaturedProducts() {
+    return List.of(
+            new Product(1L, "Product 1", 1200.99, "key1")
+    );
+  }
 }

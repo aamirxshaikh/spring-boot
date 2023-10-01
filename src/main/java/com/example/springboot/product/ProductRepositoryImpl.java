@@ -11,4 +11,9 @@ public class ProductRepositoryImpl implements ProductRepository {
   public List<Product> getProducts() {
     return Collections.emptyList();
   }
+
+  @Override
+  public List<Product> getFeaturedProducts() {
+    return Collections.emptyList();
+  }
 }

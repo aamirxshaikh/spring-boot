@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/products")
-public class ProductController {
+@RequestMapping("/api/v2/products")
+public class ProductControllerV2 {
   private final ProductService productService;
 
   @Autowired
-  public ProductController(ProductService productService) {
+  public ProductControllerV2(ProductService productService) {
     this.productService = productService;
   }
 
@@ -37,5 +37,10 @@ public class ProductController {
   void deleteProduct(@PathVariable("id") Long id) {
     System.out.println("DELETE");
     System.out.println(id);
+  }
+
+  @GetMapping("/featured")
+  List<Product> getFeaturedProducts() {
+    return productService.getFeaturedProducts();
   }
 }
