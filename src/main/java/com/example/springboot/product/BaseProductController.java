@@ -1,5 +1,6 @@
 package com.example.springboot.product;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ public abstract class BaseProductController {
   }
 
   @PostMapping
-  public void createProduct(@RequestBody Product product) {
+  public void createProduct(@Valid @RequestBody Product product) {
     System.out.println("POST");
     System.out.println(product);
   }

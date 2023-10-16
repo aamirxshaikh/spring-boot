@@ -2,11 +2,21 @@ package com.example.springboot.product;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class Product {
   private final Long id;
+
+  @NotBlank
   private final String name;
+
+  @NotNull
+  @DecimalMin(value = "0.0")
   private final Double price;
+
+  @NotBlank
   @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   private final String secretKey;
 
