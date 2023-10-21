@@ -9,14 +9,14 @@ import jakarta.validation.constraints.NotNull;
 public class Product {
   private final Long id;
 
-  @NotBlank
+  @NotBlank(message = "Name must not be empty")
   private final String name;
 
-  @NotNull
+  @NotNull(message = "Price must not be empty")
   @DecimalMin(value = "0.0")
   private final Double price;
 
-  @NotBlank
+  @NotBlank(message = "Secret key must not be empty")
   @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   private final String secretKey;
 
