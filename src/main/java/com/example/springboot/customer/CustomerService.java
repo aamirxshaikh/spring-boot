@@ -15,6 +15,10 @@ public class CustomerService {
     this.customerRepository = customerRepository;
   }
 
+  public Customer getCustomer(Long id) {
+    return customerRepository.getCustomer(id);
+  }
+
   public List<Customer> getCustomers() {
     return customerRepository.getCustomers();
   }

@@ -8,6 +8,11 @@ import java.util.List;
 @Repository
 public class CustomerRepositoryImpl implements CustomerRepository {
   @Override
+  public Customer getCustomer(Long id) {
+    return null;
+  }
+
+  @Override
   public List<Customer> getCustomers() {
     return Collections.emptyList();
   }
