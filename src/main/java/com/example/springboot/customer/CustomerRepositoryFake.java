@@ -1,5 +1,6 @@
 package com.example.springboot.customer;
 
+import com.example.springboot.exception.NotFoundException;
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
@@ -19,7 +20,7 @@ public class CustomerRepositoryFake implements CustomerRepository {
             .stream()
             .filter(customer -> customer.getId().equals(id))
             .findFirst()
-            .orElseThrow(() -> new IllegalStateException("Customer with id " + id + " not found"));
+            .orElseThrow(() -> new NotFoundException("Customer with id " + id + " not found"));
   }
 
   @Override
