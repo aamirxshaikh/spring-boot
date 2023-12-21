@@ -1,9 +1,6 @@
 package com.example.springboot.customer;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CustomerRepository {
-  Customer getCustomer(Long id);
-
-  List<Customer> getCustomers();
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 }
