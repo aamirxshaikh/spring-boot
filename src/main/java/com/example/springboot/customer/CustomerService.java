@@ -11,7 +11,7 @@ public class CustomerService {
   private final CustomerRepository customerRepository;
 
   @Autowired
-  public CustomerService(CustomerRepository customerRepository) {
+  public CustomerService(@Qualifier("customerRepositoryFake") CustomerRepository customerRepository) {
     this.customerRepository = customerRepository;
   }
 
