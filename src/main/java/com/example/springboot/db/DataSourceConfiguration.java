@@ -1,13 +1,13 @@
 package com.example.springboot.db;
 
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix = "datasource")
+@ConfigurationProperties(prefix = "spring.datasource")
 @Component
 public class DataSourceConfiguration {
   private String url;
+  private String driverClassName;
   private String username;
   private String password;
 
@@ -17,6 +17,14 @@ public class DataSourceConfiguration {
 
   public void setUrl(String url) {
     this.url = url;
+  }
+
+  public String getDriverClassName() {
+    return driverClassName;
+  }
+
+  public void setDriverClassName(String driverClassName) {
+    this.driverClassName = driverClassName;
   }
 
   public String getUsername() {
