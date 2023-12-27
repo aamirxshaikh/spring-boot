@@ -21,6 +21,8 @@
 - [Validation](https://github.com/aamirxshaikh/spring-boot/tree/8-validation): Get hands-on with validation techniques in Spring Boot.
 - [Exception Handling](https://github.com/aamirxshaikh/spring-boot/tree/9-exception-handling): Learn about exception handling mechanisms in Spring Boot.
 - [H2 Database](https://github.com/aamirxshaikh/spring-boot/tree/10-h2-database): Explore Spring Boot's H2 database integration.
+- [Logging](https://github.com/aamirxshaikh/spring-boot/tree/12-logging): Delve into logging strategies and best practices in Spring Boot. Understand how to configure various logging frameworks and leverage them for debugging, monitoring, and auditing your applications.
+- [Actuator](https://github.com/aamirxshaikh/spring-boot/tree/6-actuator): Explore Spring Boot Actuator for monitoring and management.
 
 # Installation
 
