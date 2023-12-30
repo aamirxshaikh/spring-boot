@@ -9,7 +9,6 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
 
 @Entity
 public class Product {
@@ -29,7 +28,6 @@ public class Product {
   private String secretKey;
 
   @NotNull(message = "Featured must not be null")
-  @Pattern(regexp = "^(true|false)$", message = "Featured must be either true or false")
   private Boolean featured;
 
   public Product() {
