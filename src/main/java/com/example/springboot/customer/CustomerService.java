@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 public class CustomerService {
-  private final static Logger LOGGER = LoggerFactory.getLogger(CustomerService.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(CustomerService.class);
   private final CustomerRepository customerRepository;
 
   @Autowired
